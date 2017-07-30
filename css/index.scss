@@ -1,0 +1,373 @@
+@import 'out/reset';
+@import 'out/clear';
+@import 'out/between';
+@import 'color/color';
+@import 'out/bg-image';
+
+@import 'carousel/carousel';
+@import 'header/header';
+@import 'footer/footer';
+@import 'out/li-between';
+
+
+@media screen and (max-width: 810px) {
+    * {
+        font-size: 12px !important;
+    }
+}
+
+header {
+    .nav {
+        > div {
+            img {
+                width: 162px;
+                height: 100%;
+                float: left;
+                margin: 1.5%;
+                
+                @media screen and (max-width: 600px) {
+                    & {
+                        width: 162px;
+                        height: 100%;
+                        margin: 1.5%;
+                    }
+                }
+            }
+            
+            .nav-hidden {
+                margin-top: 15px;
+                
+                ul {
+                    top: 16px !important;
+                    left: -33px !important;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+    background-color: $bg-color;
+    
+    > div {
+        width: 70%;
+        margin: 5% auto;  
+        
+        @media screen and (max-width: 1200px) {
+            & {
+                width: 98%;
+            }
+        }
+        
+        @media screen and (max-width: 810px) {
+            & {
+                margin: 10% auto;
+            }
+        }
+    }
+    
+    .line1 {
+        @include between;
+        
+        > div {
+            display: inline-block;
+            width: 17.5%;
+            padding: 0 2%;
+            text-align: center;
+            height: 13rem;
+            margin: 0 1.491%;
+            vertical-align: middle;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    width: 100%;
+                }
+            }
+            
+            h4 {
+                margin: 15px 0;
+            }
+            
+            .guifan {
+                margin: 18px 0;
+            }
+            
+            p {
+                text-align: left;
+                font-size: 1rem;
+                color: $font;
+                margin-left: 3%;
+            }
+        }
+        
+        .line1-border {
+            border-left: 2px dashed $border;
+            padding-top: 1%;
+            
+            .number {
+                padding-left: 21px;
+                color: $green;
+                line-height: 1rem;
+                margin-top: 10.5%;
+                background-image: url('../img/技能树首页_25.jpg');
+                @include bg-img(
+                    $bg-s-x: 11px,
+                    $bg-s-y: 14px,
+                    $bg-p: left);
+                    
+                @media screen and (max-width: 810px) {
+                    & {
+                        margin-top: 4.5%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .line2 {
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        //整排
+        > div {
+            width: 100%;
+            margin-bottom: 20px;
+            @include between;
+            height: 7rem;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    height: 100%;
+                }
+            }
+            
+            img {
+                width: 28px;
+                height: 26px;
+                vertical-align: middle;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        margin-left: 30%;
+                    }
+                }
+            }
+            
+            //文字与圆
+            > div {
+                width: 17%;
+                display: inline-block;
+                vertical-align: middle;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                
+                .circular {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    box-shadow: 0 0 2px $circle;
+                    position: relative;
+                    background-color: $white;
+                    text-align: center;
+                    vertical-align: middle;
+                    
+                    span {
+                        position: absolute;
+                        font-size: 1rem;
+                        color: $green;
+                        vertical-align: middle;
+                        left: 41%;
+                        top: 27%;
+                    }
+                }
+                
+                p {
+                   display: inline-block;
+                   width: 76%;
+                   vertical-align: middle;
+                   margin-left: 2%;
+                   
+                   @media screen and (max-width: 1200px) and (min-width: 810px) {
+                       & {
+                           width: 64%;
+                       }
+                   }
+                }
+            }
+        }
+    }
+    
+    .line3 {
+        position: relative;
+        
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        ul {
+            width: 60px;
+            height: 10px;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            margin-left: -25px;
+            
+            li {
+                width: 10px;
+                height: 10px;
+                border: 1px solid $border;
+                border-radius: 100%;
+                background-color: $white;
+                float: left;
+                margin-right: 8px;
+            }
+            
+            &:after {
+                @include clear-a;
+            }
+        }
+        
+        .item {
+            @include between;
+            
+            
+            > div {
+                width: 17%;
+                text-align: center;
+                padding: 5% 3%;
+                background-color: $white;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                
+                img {
+                    width: 108px;
+                    height: 108px;
+                }
+                
+                h4 {
+                    margin: 20px 0;
+                }
+                
+                p {
+                    font-size: 1rem;
+                    color: $font;
+                    text-align: left;
+                    line-height: 1.7rem;
+                }
+            }
+        }
+    }
+    
+    .line4 {
+        
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+            
+        }
+        
+        ul {
+            width: 100%;
+            background-color: $white;
+            text-align: justify;
+            @include li-between;
+            
+            li {
+                vertical-align: middle;
+                padding: 4% 0;
+                text-align: center;
+                margin: 0;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                
+                img {
+                    vertical-align: middle;
+                }
+                
+            }
+                
+            .img-border {
+                -webkit-box-shadow: 0 0 30px $border;
+                box-shadow: 0 0 30px $border;
+                z-index: 3;
+            }
+        }
+    }
+    
+}
+
+.main-link {
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+        
+    h4 {
+        margin: 1% 0;
+    }
+        
+    ul {
+        width: 70% !important;
+        margin: 1% auto;
+        color: $font;
+        @include li-between;
+        overflow-x: hidden;
+        padding-left: 4%;
+        
+        @media screen and (max-width: 1200px) {
+            & {
+                width: 100% !important;
+            }
+        }
+            
+        li {
+            float: left;
+            font-size: 0.9rem;
+            list-style: disc;
+            width: 10% !important;
+            display: list-item;
+            margin: 0;
+            padding-bottom: 5px;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    width: 70px !important;
+                    margin-bottom: 1%;
+                }
+            }
+            
+            a {
+                color: $font;
+                
+                &:hover {
+                    border-bottom: 1px solid $font;
+                }
+            }
+        }
+            
+        &:after {
+            @include clear-a;
+        }
+    }
+}
